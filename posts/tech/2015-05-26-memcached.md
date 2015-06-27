@@ -34,7 +34,7 @@ keywords: memcached
 
 6. 写入时根据值大小找到一块最合适的块进行写入。缺点是内存利用率不高。例如要将100字节的值存到128字节的chunk中，剩下28字节就浪费了。
 
-![附图](http://blog.lisijie.org/images/memcached-01.png)
+![附图](http://www.lisijie.org/static/images/memcached-01.png)
 
 ## memcached 状态查看
 
