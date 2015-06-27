@@ -1,0 +1,38 @@
+{{template "header.html" .}}
+
+<div id="wiki_title">{{.title}}</div>
+
+<div id="index">
+
+	{{range $k, $v := .categoryList}}
+
+	<h2 id="intro">{{$v.Name}}</h2>
+	<ul>
+		{{range $kk, $p := $v.Posts}}
+		<li class="pagelist">
+			<a href="{{$p.Permalink}}">{{$p.Title}}</a>
+		</li>
+		{{end}}
+	</ul>
+	<div class="clearfix"></div>
+
+	{{end}}
+
+	<h2 id="intro">项目</h2>
+	<ul>
+		<li class="pagelist"><a href="https://github.com/lisijie/goblog" title="基于go语言和beego框架的简易blog系统">GoBlog</a></li>
+		<li class="pagelist"><a href="https://github.com/lisijie/mdwiki" title="一个简单极速的wiki引擎">mdwiki</a></li>
+		<li class="pagelist"><a href="https://github.com/lisijie/php-framework" title="我的php开发框架">php-framework</a></li>
+		<li class="pagelist"><a href="https://github.com/lisijie/lampnotes-src" title="lampnotes.com网站源码">lampnotes.com source</a></li>
+	</ul>
+	<div class="clearfix"></div>
+
+	<h2 id="intro">链接</h2>
+	<ul>
+		<li class="pagelist"><a href="http://lampnotes.com" target="_blank" title="Web开发技术分享平台">lampnotes.com</a></li>
+	</ul>
+	<div class="clearfix"></div>
+
+</div>
+
+{{template "footer.html" .}}

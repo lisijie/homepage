@@ -1,0 +1,20 @@
+{{template "header.html" .}}
+
+<div id="wiki_title">{{.title}}</div>
+
+<div id="index">
+
+	<h2 id="intro">{{.category.Name}}</h2>
+	<ul>
+		{{range $k, $p := .category.Posts}}
+		<li class="pagelist">
+			<a href="{{$p.Permalink}}">{{$p.Title}}</a>
+		</li>
+		{{end}}
+	</ul>
+	<div class="clearfix"></div>
+
+
+</div>
+
+{{template "footer.html" .}}
