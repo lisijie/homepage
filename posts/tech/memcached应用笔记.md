@@ -3,6 +3,8 @@ layout: post
 title: memcached 应用笔记
 category: 技术
 keywords: memcached
+date: 2015-05-06
+author: lisijie
 ---
 
 ## memcached 需要注意的地方

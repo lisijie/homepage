@@ -3,6 +3,8 @@ layout: post
 title: Linux终端字体颜色
 category: 技术
 keywords: linux
+date: 2014-01-07
+author: lisijie
 ---
 
 文本终端的颜色可以使用“ANSI非常规字符序列”来生成:
