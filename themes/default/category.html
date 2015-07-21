@@ -10,7 +10,7 @@
 	<ul>
 		{{range $k, $p := .postList}}
 		<li class="pagelist">
-			<a href="{{$p.Permalink}}">{{$p.Title}}</a> <span>{{Date $p.PostTime "Y-m-d H:i"}}</span>
+			<a href="{{$p.Permalink}}">{{$p.Title}}</a> <span>{{Date $p.PostTime "Y-m-d"}}</span>
 		</li>
 		{{end}}
 	</ul>
