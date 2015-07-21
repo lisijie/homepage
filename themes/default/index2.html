@@ -1,16 +1,16 @@
 {{template "header.html" .}}
 
-<div id="wiki_title">{{.pageTitle}}</div>
+<div id="wiki_title">{{.title}}</div>
 
 <div id="index">
 
 	{{range $k, $v := .categoryList}}
-	{{$postList := GetPostListByCategory $v.Name 1 10}}
-	<h2 id="intro"><a href="{{$v.Permalink}}" style="font-size:12px;float:right;line-height:20px">更多</a> {{$v.Name}}</h2>
+
+	<h2 id="intro">{{$v.Name}}</h2>
 	<ul>
-		{{range $kk, $p := $postList}}
+		{{range $kk, $p := $v.Posts}}
 		<li class="pagelist">
-			<a href="{{$p.Permalink}}">{{$p.Title}}</a> <span>{{Date $p.PostTime "Y-m-d H:i"}}</span>
+			<a href="{{$p.Permalink}}">{{$p.Title}}</a>
 		</li>
 		{{end}}
 	</ul>
@@ -32,7 +32,6 @@
 		<li class="pagelist"><a href="http://lampnotes.com" target="_blank" title="Web开发技术分享平台">lampnotes.com</a></li>
 	</ul>
 	<div class="clearfix"></div>
-
 
 </div>
 
