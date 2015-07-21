@@ -7,9 +7,10 @@ date: 2015-07-21
 author: lisijie
 ---
 
-我的操作系统：64位 windows 7 SP1
+我的环境：
 
-Go版本：1.4.2
+ - 64位 windows 7 SP1
+ - go version go1.4.2 windows/amd64
 
 ## 1. 安装MinGW-w64
 
