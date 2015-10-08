@@ -7,7 +7,7 @@ date: 2015-09-30
 author: lisijie
 ---
 
-Linux内核为每个TCP应用程序维护两条backlog队列，一条是未连接队列，一条是已连接队列，分别对应net.ipv4.tcp_max_syn_backlog和net.core.somaxconn两个内核参数。
+Linux内核为每个TCP服务器程序维护两条backlog队列，一条是TCP层的未连接队列，一条是应用层的已连接队列，分别对应net.ipv4.tcp_max_syn_backlog和net.core.somaxconn两个内核参数。
 
 一个客户端连接在完成TCP 3次握手之前首先进入到未连接队列，完成握手之后正式建立连接，进入已连接队列，交付给应用程序处理。应用程序调用accept()函数从已连接队列取出连接进行处理。应用层在调用listen()函数时指定的backlog是已连接队列大小，如果大于somaxconn将被设为somaxconn。
 
