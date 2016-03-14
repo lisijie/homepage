@@ -9,11 +9,9 @@ author: lisijie
 
 ## 过滤器
 
-### 1、作用
-
 过滤器用于对web资源请求和响应进行检查和处理，一个请求会先经过过滤器，然后再到servlet，多个过滤器在一起形成一条过滤链。使用过滤器可以对请求进行登录验证、请求转发等操作。
 
-### 2、创建过滤器
+### 创建过滤器
 
 创建类并实现javax.servlet.Filter接口，该接口定义了以下几个方法：
 
@@ -64,7 +62,7 @@ author: lisijie
 		<dispatcher>REQUEST</dispatcher>
 	</filter-mapping>
 
-### 3、过滤器执行顺序
+### 过滤器执行顺序
 
 - web应用启动时执行 `init` 方法。
 - 有请求进来时执行`doFilter()`方法。
@@ -72,7 +70,7 @@ author: lisijie
 - servlet执行完后，依次执行各个过滤器chain.doFilter()后的代码。
 - web应用关闭时调用 `destroy()` 方法。
 
-### 4、过滤器分类：
+### 过滤器分类：
 
 - REQUEST （默认），直接访问页面时，web容器将会调用过滤器。
 - FORWARD，目标资源是通过RequestDispathcer的forward访问时，过滤器将被调用。
@@ -80,21 +78,19 @@ author: lisijie
 - ERROR，目标资源是通过声明式异常处理机制调用时，过滤器将被调用。
 - ASYNC (Servlet 3.0) 支持异步处理。
 
-#### 5、Servlet 3.0 新特性：
+### Servlet 3.0 新特性：
 
 - 增加ASYNC异步处理过滤器类型。
 - 支持使用@WebFilter注解配置过滤器。
 
 
-## 监听器：
-
-### 1、作用
+## 监听器
 
 用于在对象事件的发生前、发生后做一些处理操作。
 
 在Java Web中，监听的事件源为ServletContext、HttpSession、ServletRequest 3大对象。其中ServletContext和HttpSession对象在应用启动时创建，只有一个实例；ServletRequest，每次有请求过来时创建，请求结束后销毁。
 
-### 2、监听器类型
+### 监听器类型
 
 监听器的类型，按监听对象划分，有以下几种：
 
@@ -110,7 +106,7 @@ author: lisijie
 
 用于监听对象中属性的增加、删除等事件，当调用相应对象的setAttribute()、removeAttribute()方法设置属性时，监听器可进行捕获。
 
-### 3、监听器使用步骤
+### 监听器使用步骤
 
 - 创建实现Listener接口的类。
 - 在web.xml中配置监听器，按照配置文件的先后顺序执行。
