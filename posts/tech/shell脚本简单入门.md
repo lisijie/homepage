@@ -4,7 +4,7 @@ title: Shell脚本简单入门
 category: 技术
 keywords: shell
 date: 2016-03-16
-author: lisijie
+author: 李思杰
 ---
 
 最近写了比较多的shell脚本，因为语法比较特殊，不经常写的话容易忘记。这里对bash shell的语法做下总结，当做备忘。
@@ -139,11 +139,9 @@ if语句跟常用的编程语言有很大不同，基本语法如下：
  		
  			var1=10
 			var2=11
-
 			if [ $var1 -gt 10 ]; then
 				echo "var1大于10"
 			fi
-
 			if [ $var2 -gt 10 ] && [ $var2 -lt 15 ]; then
 				echo "var2大于10且小于15"
 			fi
@@ -153,7 +151,6 @@ if语句跟常用的编程语言有很大不同，基本语法如下：
  		 	var1="hello"
 			var2="Hello"
 			var3=""
-			
 			if [ $var1 \> $var2 ]; then
 				echo "bash shell的比较根据ASCII码值，因此${var1}大于${var2}"
 			fi
@@ -163,8 +160,7 @@ if语句跟常用的编程语言有很大不同，基本语法如下：
 			if [ -z "$var4" ]; then
 				echo "var4是个空字符串"
 			fi
-		
-		 			
+					
  	* 文件比较支持以下表达式：
  	
 		| 表达式           | 说明                              |
