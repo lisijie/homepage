@@ -1,9 +1,9 @@
 ---
 layout: post
-title: shell脚本简单入门
+title: Shell脚本简单入门
 category: 技术
-keywords: Java
-date: 2016-02-19
+keywords: shell
+date: 2016-03-16
 author: lisijie
 ---
 
